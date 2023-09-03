@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffff;
+  height: 100vh;
+}
+
+.heading{
+      background-color: #17a2b8;
+      color: white;
+      margin-bottom: 0px;
+
+    }
+
+.row{
+  margin:30px;
+  display: inline-block;
+  margin-left: 150px;
+  width: 80%;
+
+}
+.mycol{
+border: 1px solid black;
+border-radius: 5%;
+display: inline-block;
+/*float: center;*/
+margin:20px 120px;
+width: 30%;
+height: 200px;  
+}
+
+
+

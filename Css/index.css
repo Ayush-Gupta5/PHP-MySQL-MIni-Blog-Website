@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffff;
+  height: 100vh;
+}
+
+.heading{
+      background-color: #17a2b8;
+      color: white;
+      margin-bottom: 0px;
+
+    }
