@@ -60,7 +60,7 @@
 							<h6>
 								<?php echo substr($rs['description'],0,300) ; ?>
 							</h6>
-							<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><button style="margin-left:65%;margin-top:10%; background-color:#17a2b8" class="btn btn-primary mb-2">Read more</button></a>
+							<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><button style="margin-left:65%; margin-top:10%; background-color:#17a2b8" class="btn btn-primary mb-2">Read more</button></a>
 					</div>
 				</div>
 				<?php } ?>
