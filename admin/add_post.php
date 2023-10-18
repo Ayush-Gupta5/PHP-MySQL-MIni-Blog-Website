@@ -37,11 +37,11 @@ $un=$_SESSION['username'];
 	
 		
 		<div class="container">
-			<div class="col-md-5" style="margin-left: 300px;">
+			<div class="col-md-5" style="margin-left: 30%;">
 			    <div class="form-area" >  
 			        <form role="form" method="post" enctype="multipart/form-data">
 			        <br style="clear:both">
-			                    <h3 style="margin-bottom: 25px; text-align: center;">Add Post</h3>
+			                    <h3 style="margin-bottom: 10%; text-align: center;">Add Post</h3>
 			    				<div class="form-group">
 									<input type="text" class="form-control" name="title" placeholder="Title" required>
 								</div>
@@ -94,8 +94,8 @@ $un=$_SESSION['username'];
 		}
 	 ?>
 
-	 <footer style="background-color: #17a2b8; margin-top:22px; margin-bottom: 0px;">
-		<h6 style="padding:10px; margin-bottom: 50px; color: white; text-align: right;">2023&copy; This Site Developed by Ayush Gupta</h6>
+	 <footer style="background-color: #17a2b8; margin-top:2%; margin-bottom: 0;">
+		<h6 style="padding:10px; margin-bottom: 0%; color: white; text-align: right;">2023&copy; This Site Developed by Ayush Gupta</h6>
 
 
 	</footer>

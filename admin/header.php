@@ -1,4 +1,4 @@
-<h1 class="alert text-center heading" ><i class="fa-solid fa-blog fa-bounce"></i> My Blog <span style="float:right; font-size: 20px;"><i class="fa-solid fa-door-open"></i> Hello, <?php echo $un; ?></span></h1>
+<h1 class="alert text-center heading" ><i class="fa-solid fa-blog fa-bounce"></i> My Blog </h1>
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">

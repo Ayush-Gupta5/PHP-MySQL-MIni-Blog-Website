@@ -158,8 +158,8 @@ $un=$_SESSION['username'];
 		}
 	 ?>
 
-	 <footer style="background-color: #17a2b8; margin-top:31px; margin-bottom: 0px;">
-		<h6 style="padding:10px; margin-bottom: 50px; color: white; text-align: right;">2023&copy; This Site Developed by Ayush Gupta</h6>
+	 <footer style="background-color: #17a2b8; margin-top:2%; margin-bottom: 0;">
+		<h6 style="padding:10px; margin-bottom: 0%; color: white; text-align: right;">2023&copy; This Site Developed by Ayush Gupta</h6>
 
 
 	</footer>

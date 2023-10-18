@@ -41,20 +41,20 @@
 	<div class="container">
 		
 		<div class="row">
-			<div class="col-sm-12" style=" border-radius: 10px; width: 100%; height: 100%; margin-top: 100px; margin-bottom: 50px;">
+			<div class="col-sm-12" style=" border-radius: 10px; width: 100%; height: 100%; margin-top: 3%;">
 				<?php 
 					if ($count>=1) {
 					
 				while ($rs=mysqli_fetch_array($res)) {
 							?>
-				<div class="row"
-					style=" width: 100%; border: 2px solid black; height: 100%; margin:10px 10px 10px 10px">
+				<div class="row"style=" width: 100%; align-items: center; border: 2px solid black; display: inline-flex; height: 100%; margin: 1%">
 
 
-					<div class="col-sm-5 " style="padding: 10px; width: 50%; height: 100%;">
-						<img src="admin/image/<?php echo $rs['photo']; ?>" width="450px" heigh="450px">
+					<div class="col-sm-5 " style="padding: 1%; text-align: center; width: 100%; height: 100%;
+					margin-top: 1%;">
+						<img src="admin/image/<?php echo $rs['photo']; ?>" width="100%" heigh="100%">
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-7" style="margin-top:1%">
 						<h3 style="color: #17a2b8;">
 							<?php echo $rs['title']; ?>
 							</h3>
@@ -68,7 +68,7 @@
 							<h6>
 								<?php echo substr($rs['description'],0,300) ; ?>
 							</h6>
-							<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><button style="margin-left:400px; background-color:#17a2b8" class="btn btn-primary mb-2">Read more</button></a>
+							<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><button style="margin-left:65%;margin-top:10%; background-color:#17a2b8" class="btn btn-primary mb-2">Read more</button></a>
 					</div>
 				</div>
 				<?php }}

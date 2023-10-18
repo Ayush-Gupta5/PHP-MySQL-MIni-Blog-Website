@@ -35,7 +35,7 @@ $un=$_SESSION['username'];
 	<!-- content -->
 
 	<div>
-		<h3 class="text-center mt-5 display-3">Category</h3>
+		<h3 class="text-center mt-5" style="font-size:50px">Category</h3>
 		<div>
 			<div class="container">
 				<!-- Button to Open the Modal -->
@@ -155,8 +155,8 @@ $un=$_SESSION['username'];
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 
-		<footer style="background-color: #17a2b8; margin-top:31px; margin-bottom: 0px;">
-		<h6 style="padding:10px; margin-bottom: 50px; color: white; text-align: right;">2023&copy; This Site Developed by Ayush Gupta</h6>
+		<footer style="background-color: #17a2b8; margin-top:3%;">
+		<h6 style="padding:1%; margin-bottom: 0px; color: white; text-align: center;">2023&copy; This Site Developed by Ayush Gupta</h6>
 
 
 	</footer>

@@ -35,17 +35,18 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12" style=" border-radius: 10px; width: 100%; height: 100%; margin-top: 100px; margin-bottom: 50px;">
+			<div class="col-sm-12" style=" border-radius: 10px; width: 100%; height: 100%; margin-top: 3%;">
 				<?php while ($rs=mysqli_fetch_array($res)) {
 							?>
 				<div class="row"
-					style=" width: 100%; border: 2px solid black; display: inline-flex; height: 100%; margin:10px 10px 10px 10px">
+					style=" width: 100%; border: 2px solid black; align-items: center; display: inline-flex; height: 100%; margin:1%">
 
 
-					<div class="col-sm-5 " style="padding: 10px; width: 50%; height: 100%;">
-						<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><img src="admin/image/<?php echo $rs['photo']; ?>" width="450px" heigh="450px"></a>
+					<div class="col-sm-5" style="padding: 1%; text-align: center; width: 100%; height: 100%;
+					margin-top: 1%;">
+						<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><img src="admin/image/<?php echo $rs['photo']; ?>" width="100%" heigh="100%"></a>
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-7" style="margin-top: 1%;">
 						<h3 style="color: #17a2b8;">
 							<a href="post_detail.php?id=<?php echo $rs['id']; ?>" style="text-decoration: none; color:#17a2b8"><?php echo $rs['title']; ?></a>
 							</h3>
@@ -59,7 +60,7 @@
 							<h6>
 								<?php echo substr($rs['description'],0,300) ; ?>
 							</h6>
-							<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><button style="margin-left:400px; background-color:#17a2b8" class="btn btn-primary mb-2">Read more</button></a>
+							<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><button style="margin-left:65%;margin-top:10%; background-color:#17a2b8" class="btn btn-primary mb-2">Read more</button></a>
 					</div>
 				</div>
 				<?php } ?>
@@ -69,8 +70,8 @@
 	</div>
 
 
-	<footer style="background-color: #17a2b8; margin-top:393px; margin-bottom: 0px;">
-		<h6 style="padding:10px; margin-bottom: 50px; color: white; text-align: right;">2023&copy; This Site Developed by Ayush Gupta</h6>
+	<footer style="background-color: #17a2b8; margin-top:10%;">
+		<h6 style="padding:1%; color: white; text-align: center;">2023&copy; This Site Developed by Ayush Gupta</h6>
 
 
 	</footer>

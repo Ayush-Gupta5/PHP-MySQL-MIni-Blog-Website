@@ -38,13 +38,13 @@ $res1=mysqli_query($conn,"select * from category");
 
 	<!-- Content -->
 	
-	<div class="container" style="margin-left:220px">
+	<div class="container">
 
 		<?php while ($rs=mysqli_fetch_array($res)) {
 			?>
 			
 				
-		<div class="col-sm-12" style=" margin-top:70px">
+		<div class="col-sm-12" style=" margin-top:4%">
 			<h3 style="color: #17a2b8;">
 							<?php echo $rs['title']; ?>
 							</h3>
@@ -55,16 +55,15 @@ $res1=mysqli_query($conn,"select * from category");
 									<?php echo $rs['date'] ?>
 								</span>
 			</h6>
-			<div style="margin-top: 20px; text-align: center;">
-			<img src="admin/image/<?php echo $rs['photo']; ?>" width="80%" heigh="80%">
-			</div><br><br>
-			<div style="text-justify: auto;">
+			<div style="margin:1%; text-align: center;">
+			<img src="admin/image/<?php echo $rs['photo']; ?>" width="100%" heigh="100%">
+			</div><br>
+			
+			<div style="margin: 1%; text-justify:center;">
 				
 				<?php echo $rs['description']; ?>
 				
 			</div>
-
-
 		</div>
 		
 		<?php
