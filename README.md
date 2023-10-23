@@ -1,7 +1,7 @@
 # PHP-MySQL-MIni-Blog-Website
 
 
-I designed and developed a compact blog website that offers an intuitive platform for administrators to create, publish, and efficiently manage blog posts, including their associated categories.<br>
+I designed and developed a compact blog website that offers an intuitive platform for administrators to create, publish, and efficiently manage blog posts, including their associated categories.<br><br>
 Languages: PHP, HTML, CSS and Database MYSQL.
 
 
