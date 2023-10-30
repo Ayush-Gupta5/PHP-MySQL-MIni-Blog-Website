@@ -1,8 +1,9 @@
 # PHP-MySQL-MIni-Blog-Website
 
 
-I developed a mini blog website by using PHP and MySQL Database, HTMl and CSS.
-By this site you can Post a blog with a particluar Categories.
+I designed and developed a compact blog website that offers an intuitive platform for administrators to create, publish, and efficiently manage blog posts, including their associated categories.<br><br>
+Languages: PHP, HTML, CSS and Database MYSQL.
+
 
 #Blog-page
 
