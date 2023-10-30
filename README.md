@@ -7,7 +7,8 @@ Languages: PHP, HTML, CSS and Database MYSQL.
 
 #Blog-page
 
-![Blog_page](https://github.com/Ayush-Gupta5/PHP-MySQL-MIni-Blog-Website/assets/143918681/6dd328fc-9954-4019-8281-2da938e5620c)
+![Blog-page](https://github.com/Ayush-Gupta5/PHP-MySQL-MIni-Blog-Website/assets/143918681/57835cc3-5512-478a-99dd-2708d04b7115)
+
 
 
 #Blog-Detail-Page
