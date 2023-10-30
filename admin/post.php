@@ -70,7 +70,7 @@ $un=$_SESSION['username'];
   	<?php 
   		if (isset($_POST['search'])) {
   			$skw=$_POST['skw'];
-  			$str="select * from post where category LIKE '%$skw%' OR date LIKE '%$skw%'  ORDER BY id desc";
+  			$str="select * from post  LEFT JOIN category ON post.category=category.cate_id where category.name LIKE '%$skw%' OR post.date LIKE '%$skw%'  ORDER BY id desc";
   			$res1=mysqli_query($conn,$str);
   			$count=mysqli_num_rows($res1);
 
@@ -88,7 +88,7 @@ $un=$_SESSION['username'];
 					      <td><?php echo substr($rs1['title'],0,30); ?></td>
 					      <td><?php echo substr($rs1['description'],0,30); ?></td>
 					      <td><?php echo $rs1['date']; ?></td>
-					      <td><?php echo $rs1['category']; ?></td>
+					      <td><?php echo $rs1['name']; ?></td>
 					      <td><?php echo $rs1['author']; ?></td>
 					      <td>
 					      	<form method="post">
