@@ -13,18 +13,21 @@
 					<a class="nav-link" href="index.php"><i class="fas fa-home"></i> Home <span
 							class="sr-only">(current)</span></a>
 				</li>
-			</ul>
-			<ul class="navbar-nav mr-auto">
-				<?php 
-					while ($rs1=mysqli_fetch_array($res1)) {
-						?>
+			
+				<li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Category
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		        	<?php while ($rs1=mysqli_fetch_array($res1)) {
+		        		?>
 
-				<li class="nav-item"   >
-      				<a class="nav-link" href="cate_wise.php?category=<?php echo $rs1['name']; ?>"><?php echo $rs1['name']; ?></a>
-      			</li>
-      			<?php 
-					}
-				 ?>
+		          <a class="dropdown-item" href="cate_wise.php?id=<?php echo $rs1['cate_id']; ?>"><?php echo $rs1['name']; ?></a>
+		          <?php
+		        	} ?>
+		          
+		        </div>
+		      </li>
 			</ul>
 		</div>
 	</nav>

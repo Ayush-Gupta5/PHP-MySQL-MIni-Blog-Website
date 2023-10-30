@@ -90,13 +90,13 @@ $un=$_SESSION['username'];
 						while ($rs=mysqli_fetch_array($res)) {
 							?>
 						<tr>
-							<td><?php echo $rs['id']; ?></td>
+							<td><?php echo $rs['cate_id']; ?></td>
 							<td><?php echo $rs['name']; ?></td>
 							<td>
 
 								<form method="post">
-									<input type="hidden" name="id" value="<?php echo $rs['id']; ?>">
-									<button class="btn btn-warning"><a href="edit_cate.php?id=<?php echo $rs['id'];?>"
+									<input type="hidden" name="id" value="<?php echo $rs['cate_id']; ?>">
+									<button class="btn btn-warning"><a href="edit_cate.php?cate_id=<?php echo $rs['cate_id'];?>"
 											style="text-decoration: none; color: white;">Edit</a></button>
 									<button type="submit" name="delete" class="btn btn-danger">Delete</button>
 								</form>

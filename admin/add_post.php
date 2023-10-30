@@ -55,7 +55,7 @@ $un=$_SESSION['username'];
 										<?php 
 										$res=mysqli_query($conn,"select * from category");
 										while ($rs=mysqli_fetch_array($res)) {
-											echo"<option value=".$rs['name'].">".$rs['name']."</option>";
+											echo"<option value=".$rs['cate_id'].">".$rs['name']."</option>";
 										}
 										 ?>
 									</select>
@@ -77,13 +77,14 @@ $un=$_SESSION['username'];
 
 	<?php 
 		if (isset($_POST['submit'])) {
+
 			$title=$_POST['title'];
 			$category=$_POST['category'];
 			$description=$_POST['desc'];
 			$date=$_POST['date'];
 			$author=$_POST['author'];
 			$photo=$_FILES['photo']['name'];
-
+			
 			move_uploaded_file($_FILES['photo']['tmp_name'], 'image/'.$photo);
 
 			$str="insert into post (title,category,description,date,author,photo) values ('$title','$category','$description','$date','$author','$photo')";

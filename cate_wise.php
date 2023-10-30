@@ -1,10 +1,11 @@
-<?php 
+	<?php 
 	include 'admin/config.php';
 
-	if (isset($_GET['category'])) {
-		$category=$_GET['category'];
-	}
-	$res=mysqli_query($conn,"select * from post where category='$category' ORDER BY id DESC ");
+	
+		$category=$_GET['id'];
+		
+	
+	$res=mysqli_query($conn,"SELECT * FROM `post` LEFT JOIN category ON post.category=category.cate_id where post.category='$category' ORDER BY post.id DESC;");
 	$count=mysqli_num_rows($res);
 	$res1=mysqli_query($conn,"select * from category"); //to fetch categories on navbar
 	

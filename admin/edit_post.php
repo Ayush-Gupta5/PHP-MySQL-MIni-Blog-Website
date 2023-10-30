@@ -61,7 +61,7 @@ $res1=mysqli_query($conn,"select * from post where id='$post_id'");
 										<?php 
 										$res=mysqli_query($conn,"select * from category");
 										while ($rs=mysqli_fetch_array($res)) {
-											echo"<option value=".$rs['name'].">".$rs['name']."</option>";
+											echo"<option value=".$rs['cate_id'].">".$rs['name']."</option>";
 										}
 										 ?>
 									</select>
@@ -105,11 +105,12 @@ $res1=mysqli_query($conn,"select * from post where id='$post_id'");
 
 			if ($photo !="") {
 				$update_photo=$_FILES['photo']['name'];
+				unlink("image/".$old_photo);
 			}else{
 				$update_photo=$old_photo;
 			}
 			move_uploaded_file($_FILES['photo']['tmp_name'], 'image/'.$photo);
-			unlink("image/".$old_photo);
+			
 
 			$str="update post set title='$title', category='$category', description='$description', date='$date', author='$author', photo='$update_photo' where id='$id'";
 			$res2=mysqli_query($conn,$str);

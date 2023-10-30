@@ -5,10 +5,10 @@ if (!isset($_SESSION['login'])) {
 	echo "<script>window.location.href='index.php';</script>";
 }
 $un=$_SESSION['username'];
-if (isset($_GET['id'])) {
-	$cate_id=$_GET['id'];
+if (isset($_GET['cate_id'])) {
+	$cate_id=$_GET['cate_id'];
 }
-$res=mysqli_query($conn,"select * from category where id='$cate_id'");
+$res=mysqli_query($conn,"select * from category where cate_id='$cate_id'");
  ?>
 <!DOCTYPE html>
 <html>
@@ -73,7 +73,7 @@ $res=mysqli_query($conn,"select * from category where id='$cate_id'");
 				$name=$_POST['name'];
 				$currentname=$_POST['cname'];
 
-				$rs1=mysqli_query($conn,"update category set name='$name' where id='$cate_id'");
+				$rs1=mysqli_query($conn,"update category set name='$name' where cate_id='$cate_id'");
 				$rs2=mysqli_query($conn,"update post set category='$name' where category='$currentname'");
 				echo '<script>alert("Category Update Successfully");</script>';
 				echo "<script>window.location.href='category.php';</script>";

@@ -1,6 +1,6 @@
 <?php 
 	include 'admin/config.php';
-	$res=mysqli_query($conn,"select * from post ORDER BY id DESC ");
+	$res=mysqli_query($conn,"SELECT * FROM `post` LEFT JOIN category ON post.category=category.cate_id ORDER BY post.id DESC; ");
 	$res1=mysqli_query($conn,"select * from category"); //to fetch categories on navbar
 
  ?>
@@ -51,7 +51,7 @@
 							<a href="post_detail.php?id=<?php echo $rs['id']; ?>" style="text-decoration: none; color:#17a2b8"><?php echo $rs['title']; ?></a>
 							</h3>
 							<h6 style="color:#17a2b8;"><i class="fa-solid fa-tags"></i>
-								<?php echo $rs['category'] ?>&nbsp;&nbsp;<i class="fa-solid fa-user"></i>
+								<?php echo $rs['name'] ?>&nbsp;&nbsp;<i class="fa-solid fa-user"></i>
 								<?php echo $rs['author']; ?>&nbsp;&nbsp;<i class="fa-solid fa-calendar-days"
 									style="color: #797c81;"></i><span style="color:grey">
 									<?php echo $rs['date'] ?>

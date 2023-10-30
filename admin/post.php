@@ -103,7 +103,7 @@ $un=$_SESSION['username'];
   				}
   			}
   		}else{
-  				$res=mysqli_query($conn,"select * from post ORDER BY id desc");
+  				$res=mysqli_query($conn,"SELECT * FROM `post` LEFT JOIN category ON post.category=category.cate_id ORDER BY id desc");
   		while ($rs=mysqli_fetch_array($res)) {
   			?>
 
@@ -114,7 +114,7 @@ $un=$_SESSION['username'];
 			      <td><?php echo substr($rs['title'],0,30); ?></td>
 			      <td><?php echo substr($rs['description'],0,30); ?></td>
 			      <td><?php echo $rs['date']; ?></td>
-			      <td><?php echo $rs['category']; ?></td>
+			      <td><?php echo $rs['name']; ?></td>
 			      <td><?php echo $rs['author']; ?></td>
 			      <td>
 			      	<form method="post">
