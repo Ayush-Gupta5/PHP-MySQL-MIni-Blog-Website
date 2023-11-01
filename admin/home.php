@@ -6,8 +6,7 @@ if (!isset($_SESSION['login'])) {
 }
 $un=$_SESSION['username'];
 $res=mysqli_query($conn,"select * from post");
-$count=
-$res1=mysqli_query($conn,"select * from Category");
+$res1=mysqli_query($conn,"select * from category");
  ?>
 <!DOCTYPE html>
 <html>
