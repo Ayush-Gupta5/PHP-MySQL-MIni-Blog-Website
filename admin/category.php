@@ -130,7 +130,7 @@ $un=$_SESSION['username'];
 		if (isset($_POST['delete'])) {
 			$id=$_POST['id'];
 
-			$res3=mysqli_query($conn,"delete from category where id='$id'");
+			$res3=mysqli_query($conn,"delete from category where cate_id='$id'");
 
 			if ($res3) {
 				echo "<script>alert('Category deleted');

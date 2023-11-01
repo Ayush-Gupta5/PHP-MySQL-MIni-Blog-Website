@@ -53,14 +53,14 @@
 
 					<div class="col-sm-5 " style="padding: 1%; text-align: center; width: 100%; height: 100%;
 					margin-top: 1%;">
-						<img src="admin/image/<?php echo $rs['photo']; ?>" width="100%" heigh="100%">
+						<a href="post_detail.php?id=<?php echo $rs['id']; ?>"><img src="admin/image/<?php echo $rs['photo']; ?>" width="100%" heigh="100%"></a>
 					</div>
 					<div class="col-sm-7" style="margin-top:1%">
-						<h3 style="color: #17a2b8;">
-							<?php echo $rs['title']; ?>
+						<h3 style="color: #17a2b8;"><a href="post_detail.php?id=<?php echo $rs['id']; ?>" style="text-decoration: none; color:#17a2b8">
+							<?php echo $rs['title']; ?></a>
 							</h3>
 							<h6 style="color:#17a2b8;"><i class="fa-solid fa-tags"></i>
-								<?php echo $rs['category'] ?>&nbsp;&nbsp;<i class="fa-solid fa-user"></i>
+								<?php echo $rs['name'] ?>&nbsp;&nbsp;<i class="fa-solid fa-user"></i>
 								<?php echo $rs['author']; ?>&nbsp;&nbsp;<i class="fa-solid fa-calendar-days"
 									style="color: #797c81;"></i><span style="color:grey">
 									<?php echo $rs['date'] ?>

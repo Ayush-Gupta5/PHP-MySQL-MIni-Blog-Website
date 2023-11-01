@@ -40,106 +40,95 @@ $un=$_SESSION['username'];
 	<div>
 		<h3 class="text-center mt-5 display-3">Posts</h3>
 		<div style="margin: 50px;">
-  <a href="add_post.php">
-      <button class="btn btn-success" style=" width:175px">Add Post</button></a>
+  
 	
       <form method="post" style="text-align: center; display:inline-block;">
-      	<input type="text" name="skw">
+      	<input type="text" name="skw" required>
       	<button type="submit" class="btn btn-warning" name="search" >Search</button>
       	<button type="submit" class="btn btn-secondary" name="refresh" >Refresh</button>
       </form>
-	     
-	<a href="home.php">
-      <button class="btn btn-primary" style="float: right;" >Back to Dashboard</button></a>
       <br><br>
 
-	<table class="table table-bordered text-center">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Image</th>
-      <th scope="col">Title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Date</th>
-      <th scope="col">Category</th>
-      <th scope="col">Author</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-  	<?php 
-  		if (isset($_POST['search'])) {
-  			$skw=$_POST['skw'];
-  			$str="select * from post  LEFT JOIN category ON post.category=category.cate_id where category.name LIKE '%$skw%' OR post.date LIKE '%$skw%'  ORDER BY id desc";
-  			$res1=mysqli_query($conn,$str);
-  			$count=mysqli_num_rows($res1);
+	<div class="table-responsive">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Image</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date</th>
+                <th scope="col">Category</th>
+                <th scope="col">Author</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            if (isset($_POST['search'])) {
+                $skw = $_POST['skw'];
+                $str = "select * from post  LEFT JOIN category ON post.category=category.cate_id where category.name LIKE '%$skw%' OR post.date LIKE '%$skw%'  ORDER BY id desc";
+                $res1 = mysqli_query($conn, $str);
+                $count = mysqli_num_rows($res1);
 
-  			if ($count==0) {
-  				echo "<script>alert('No Post Found');
-  								window.location.href='post.php';
-  				</script>";
-  			}else{
-  				while ($rs1=mysqli_fetch_array($res1)) {
-  					?>
-  					
-  						<tr>
-					      <td><?php echo $rs1['id']; ?></td>
-					      <td><img src="image/<?php echo $rs1['photo']; ?>" width="200px" height="100px"></td>
-					      <td><?php echo substr($rs1['title'],0,30); ?></td>
-					      <td><?php echo substr($rs1['description'],0,30); ?></td>
-					      <td><?php echo $rs1['date']; ?></td>
-					      <td><?php echo $rs1['name']; ?></td>
-					      <td><?php echo $rs1['author']; ?></td>
-					      <td>
-					      	<form method="post">
-					      		<input type="hidden" name="image" value="<?php echo $rs1['photo']; ?>">
-					      		<input type="hidden" name="postid" value="<?php echo $rs1['id']; ?>">
-					      		<button class="btn btn-warning"><a href="edit_post.php?id=<?php echo $rs1['id']; ?>" style="text-decoration: none; color:white">Edit</a></button>
-					      		<button type=submit name="delete"class="btn btn-danger">Delete</button>
-					      	</form>
-					      </td>					      
-					    </tr>
-  					<?php
-  				}
-  			}
-  		}else{
-  				$res=mysqli_query($conn,"SELECT * FROM `post` LEFT JOIN category ON post.category=category.cate_id ORDER BY id desc");
-  		while ($rs=mysqli_fetch_array($res)) {
-  			?>
+                if ($count == 0) {
+                    echo "<script>alert('No Post Found');
+                                window.location.href='post.php';
+                    </script>";
+                } else {
+                    while ($rs1 = mysqli_fetch_array($res1)) {
+                        ?>
+                        <tr>
+                            <td><?php echo $rs1['id']; ?></td>
+                            <td><img src="image/<?php echo $rs1['photo']; ?>" width="200px" height="100px"></td>
+                            <td><?php echo substr($rs1['title'], 0, 30); ?></td>
+                            <td><?php echo substr($rs1['description'], 0, 30); ?></td>
+                            <td><?php echo $rs1['date']; ?></td>
+                            <td><?php echo $rs1['name']; ?></td>
+                            <td><?php echo $rs1['author']; ?></td>
+                            <td>
+                                <form method="post">
+                                    <input type="hidden" name="image" value="<?php echo $rs1['photo']; ?>">
+                                    <input type="hidden" name="postid" value="<?php echo $rs1['id']; ?>">
+                                    <button class="btn btn-warning"><a href="edit_post.php?id=<?php echo $rs1['id']; ?>"
+                                                                  style="text-decoration: none; color:white">Edit</a></button>
+                                    <button type=submit name="delete" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                }
+            } else {
+                $res = mysqli_query($conn, "SELECT * FROM `post` LEFT JOIN category ON post.category=category.cate_id ORDER BY id desc");
+                while ($rs = mysqli_fetch_array($res)) {
+                    ?>
+                    <tr>
+                        <td><?php echo $rs['id']; ?></td>
+                        <td><img src="image/<?php echo $rs['photo']; ?>" width="200px" height="100px"></td>
+                        <td><?php echo substr($rs['title'], 0, 30); ?></td>
+                        <td><?php echo substr($rs['description'], 0, 30); ?></td>
+                        <td><?php echo $rs['date']; ?></td>
+                        <td><?php echo $rs['name']; ?></td>
+                        <td><?php echo $rs['author']; ?></td>
+                        <td>
+                            <form method="post">
+                                <input type="hidden" name="image" value="<?php echo $rs['photo']; ?>">
+                                <input type="hidden" name="postid" value="<?php echo $rs['id']; ?>">
+                                <button class="btn btn-warning"><a href="edit_post.php?id=<?php echo $rs['id']; ?>"
+                                                              style="text-decoration: none; color:white">Edit</a></button>
+                                <button type=submit name="delete" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <?php
+                }
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
 
-
-			    <tr>
-			      <td><?php echo $rs['id']; ?></td>
-			      <td><img src="image/<?php echo $rs['photo']; ?>" width="200px" height="100px"></td>
-			      <td><?php echo substr($rs['title'],0,30); ?></td>
-			      <td><?php echo substr($rs['description'],0,30); ?></td>
-			      <td><?php echo $rs['date']; ?></td>
-			      <td><?php echo $rs['name']; ?></td>
-			      <td><?php echo $rs['author']; ?></td>
-			      <td>
-			      	<form method="post">
-			      		<input type="hidden" name="image" value="<?php echo $rs['photo']; ?>">
-			      		<input type="hidden" name="postid" value="<?php echo $rs['id']; ?>">
-			      		<button class="btn btn-warning"><a href="edit_post.php?id=<?php echo $rs['id']; ?>" style="text-decoration: none; color:white">Edit</a></button>
-			      		<button type=submit name="delete"class="btn btn-danger">Delete</button>
-			      	</form>
-			      </td>
-			      
-			      
-			    </tr>
-    <?php
-  		}
-  		}
-  	?>
-
-
-
-
-
-  	
-  		
-  </tbody>
-</table>
 </div>
 
 

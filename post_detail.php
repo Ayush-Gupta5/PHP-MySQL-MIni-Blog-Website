@@ -3,7 +3,7 @@ include 'admin/config.php';
 if (isset($_GET['id'])) {
 		$post_id=$_GET['id'];
 	}
-$res=mysqli_query($conn,"select * from post where id='$post_id'");
+$res=mysqli_query($conn,"SELECT * FROM `post` LEFT JOIN category ON post.category=category.cate_id where post.id='$post_id'");
 $res1=mysqli_query($conn,"select * from category");
 
  ?>
@@ -49,7 +49,7 @@ $res1=mysqli_query($conn,"select * from category");
 							<?php echo $rs['title']; ?>
 							</h3>
 			<h6 style="color:#17a2b8;"><i class="fa-solid fa-tags"></i>
-								<?php echo $rs['category'] ?>&nbsp;&nbsp;<i class="fa-solid fa-user"></i>
+								<?php echo $rs['name'] ?>&nbsp;&nbsp;<i class="fa-solid fa-user"></i>
 								<?php echo $rs['author']; ?>&nbsp;&nbsp;<i class="fa-solid fa-calendar-days"
 									style="color: #797c81;"></i><span style="color:grey">
 									<?php echo $rs['date'] ?>

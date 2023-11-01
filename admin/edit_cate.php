@@ -47,7 +47,7 @@ $res=mysqli_query($conn,"select * from category where cate_id='$cate_id'");
 
 	<!-- Content -->
 	<div class="container mt-5">
-	<h1 class="alert-info text-center mb-5 p-3">Add Department</h1>
+	<h1 class="alert-info text-center mb-5 p-3">Update Department</h1>
 	<center>
 		<?php while ($rs=mysqli_fetch_array($res)) {
 			?>
