@@ -43,9 +43,9 @@ $un=$_SESSION['username'];
   
 	
       <form method="post" style="text-align: center; display:inline-block;">
-      	<input type="text" name="skw" required>
+      	<input type="text" name="skw" >
       	<button type="submit" class="btn btn-warning" name="search" >Search</button>
-      	<button type="submit" class="btn btn-secondary" name="refresh" >Refresh</button>
+      	<button type="refresh" class="btn btn-secondary" name="refresh" >Refresh</button>
       </form>
       <br><br>
 
