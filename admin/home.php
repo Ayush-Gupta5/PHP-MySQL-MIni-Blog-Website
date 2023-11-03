@@ -42,7 +42,7 @@ $res1=mysqli_query($conn,"select * from category");
 		<div class="row"> 
 
 			<div class="mycol" style="background: #17a2b8; color:white">		
-				<h1>&nbsp;Categorys</h1><br> <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo mysqli_num_rows($res1);?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-list-alt" aria-hidden="true"></i></h1><hr><a href="category.php" style="text-decoration:none; color:white;"><h5 style=" ">More info</h5></a>
+				<h1>&nbsp;Categories</h1><br> <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo mysqli_num_rows($res1);?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-list-alt" aria-hidden="true"></i></h1><hr><a href="category.php" style="text-decoration:none; color:white;"><h5 style=" ">More info</h5></a>
 			</div> 
 
 			<div class="mycol1" style="background: #17a2b8; color: white;">
